@@ -66,14 +66,14 @@ come in as well.
 /* ---- Casing ----------------------------------------------- */
 
 #roads_high::outline[zoom>=11][zoom<=20],
-#tunnel[render='1_outline'][zoom>=11][zoom<=20],
-#bridge[render='1_outline'][zoom>=11][zoom<=20]{
+{
   /* -- colors & styles -- */
   line-cap: round;
   [bridge=1],
   [tunnel=1] {
     line-cap: butt;
   }
+
   line-join: round;
   line-color: @standard_case;
   [bridge=1] { line-color: @standard_case * 0.8; }
@@ -100,7 +100,10 @@ come in as well.
   [stylegroup='railway'] {
     line-color: fadeout(@land,50%);
     [bridge=1] { line-color: @secondary_case * 0.8; }
-  }
+  }   
+  [toreview='no'][stylegroup!='railway'] {
+   line-color: black; 
+    }
  
   [tunnel=1] { line-dasharray: 3,3; }        
   /* -- widths -- */

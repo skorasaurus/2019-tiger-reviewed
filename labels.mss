@@ -288,10 +288,10 @@
 /* ================================================================== */
 /* ONE-WAY ARROWS
 /* ================================================================== */
-
+/*#motorway_label[oneway!=0 */ 
 #motorway_label[oneway!=0][zoom>=16],
-#mainroad_label[oneway!=0][zoom>=16],
-#minorroad_label[oneway!=0][zoom>=16] {
+#mainroad_label[oneway='yes'][zoom>=16],
+#minorroad_label[oneway='yes'][zoom>=16] {
   marker-placement:line;
   marker-max-error: 0.5;
   marker-spacing: 200;
